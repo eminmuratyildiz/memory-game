@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  .rotate-Y {
+    transform: rotateY(180deg);
+  }
+  .rotate-Y-n {
+    transform: rotateY(-180deg);
+  }
+}
