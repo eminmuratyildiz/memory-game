@@ -6,7 +6,7 @@ function App() {
   const { objects, score } = useSelector((state) => state.data);
   return (
     <>
-      <div className="flex justify-center items-center w-[300px] tablet:w-[500px] pt-20 mx-auto relative">
+      <div className="flex justify-center items-center w-[300px] tablet:w-[500px] pt-16 mx-auto relative">
         <div className="grid grid-cols-4 tablet:grid-cols-6 gap-3 w-full">
           {objects.map((item) => (
             <Card item={item} key={item.id} />
