@@ -20,7 +20,7 @@ function Card({ item }) {
         }, 1500);
         setTimerId(id);
       }}
-      className={`relative  w-[75px] h-[100px] cursor-pointer select-none ${
+      className={`relative w-[65px] h-[70px] tablet:w-[75px] tablet:h-[100px] cursor-pointer select-none ${
         item.disabled
           ? "pointer-events-none"
           : selected1 !== "" && selected2 !== ""
@@ -31,14 +31,14 @@ function Card({ item }) {
       <div
         className={`${
           item.visibility ? "rotate-Y" : ""
-        } absolute w-full h-full bg-[#f4f5f7] rounded-[10px] text-[#b9bfcc] backface-hidden leading-[100px] text-center text-[50px] transition-all duration-300`}
+        } absolute w-full h-full bg-[#f4f5f7] rounded-[10px] text-[#b9bfcc] backface-hidden leading-[70px] tablet:leading-[100px] text-center text-[50px] transition-all duration-300`}
       >
         ?
       </div>
       <div
         className={`absolute ${
           item.visibility ? "" : "rotate-Y-n"
-        } backface-hidden w-full rounded-[10px] h-full text-[#b9bfcc] leading-[100px] text-center text-[50px] transition-all duration-300`}
+        } backface-hidden w-full rounded-[10px] h-full text-[#b9bfcc] leading-[70px] tablet:leading-[100px] text-center text-[50px] transition-all duration-300`}
       >
         <img
           className="absolute top-[50%] translate-y-[-50%]"
