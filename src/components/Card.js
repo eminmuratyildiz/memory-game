@@ -1,16 +1,24 @@
 import { useDispatch, useSelector } from "react-redux";
 import { check, checkUnmatch } from "../redux/gameSlice";
+import { useEffect, useState } from "react";
 
 function Card({ item }) {
   const dispatch = useDispatch();
   const { selected1, selected2 } = useSelector((state) => state.data);
+  const [timerId, setTimerId] = useState(null);
+  useEffect(() => {
+    return () => {
+      clearTimeout(timerId);
+    };
+  }, [timerId]);
   return (
     <div
       onClick={() => {
         dispatch(check(item));
-        setTimeout(() => {
+        const id = setTimeout(() => {
           dispatch(checkUnmatch());
         }, 1500);
+        setTimerId(id);
       }}
       className={`relative  w-[75px] h-[100px] cursor-pointer select-none ${
         item.disabled
